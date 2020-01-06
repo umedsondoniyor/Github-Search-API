@@ -1,8 +1,11 @@
+require('dotenv').config()
+
+console.log(process.env )
 class Github {
   constructor() {
      // property 
-     this.client_id = '82575c014d8dc01681ef';
-     this.client_secret = '1b48f05d369bdb3dcb0334ae35cc31265d58ab28';
+     this.client_id = process.env.API_ID;
+     this.client_secret = process.env.API_KEY;
     this.repos_count = 5;
     this.repos_sort = 'created: asc';
   }
